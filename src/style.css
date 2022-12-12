@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Thasadith:wght@400&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --shadow-color: 0deg 0% 58%;
+  --shadow-elevation-low: 0.3px 0.8px 1px hsl(var(--shadow-color) / 0.39),
+    0.6px 1.4px 1.7px -1.2px hsl(var(--shadow-color) / 0.39),
+    1.5px 3.5px 4.3px -2.5px hsl(var(--shadow-color) / 0.39);
+  --shadow-elevation-medium: 0.3px 0.8px 1px hsl(var(--shadow-color) / 0.41),
+    1.2px 2.8px 3.4px -0.8px hsl(var(--shadow-color) / 0.41),
+    3px 7.1px 8.7px -1.7px hsl(var(--shadow-color) / 0.41),
+    7.3px 17.3px 21.1px -2.5px hsl(var(--shadow-color) / 0.41);
+  --shadow-elevation-high: 0.3px 0.8px 1px hsl(var(--shadow-color) / 0.38),
+    2.2px 5.3px 6.5px -0.4px hsl(var(--shadow-color) / 0.38),
+    4.2px 9.9px 12.1px -0.7px hsl(var(--shadow-color) / 0.38),
+    6.9px 16.3px 19.9px -1.1px hsl(var(--shadow-color) / 0.38),
+    11px 26.1px 31.9px -1.4px hsl(var(--shadow-color) / 0.38),
+    17.2px 40.9px 49.9px -1.8px hsl(var(--shadow-color) / 0.38),
+    26.2px 62.3px 76px -2.1px hsl(var(--shadow-color) / 0.38),
+    38.7px 91.8px 112.1px -2.5px hsl(var(--shadow-color) / 0.38);
+
+  --color-text-lowest-freq: rgb(168, 168, 168);
+}
+
+.shadow-low {
+  box-shadow: var(--shadow-elevation-low);
+}
+
+.shadow-medium {
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.shadow-high {
+  box-shadow: var(--shadow-elevation-high);
+}
+
+/* Styling Now */
+
+#container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.project {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: end;
+
+  background-color: white;
+  padding: 25px;
+}
+
+.task {
+  width: 300px;
+  background-color: gainsboro;
+
+  display: flex;
+  align-items: center;
+
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.85rem;
+
+  box-shadow: var(--shadow-elevation-low);
+}
+
+.task:hover {
+  background-color: rgb(225, 225, 225);
+}
+
+.text-container {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
+}
+
+.task-lg {
+  height: 50px;
+  margin-top: 6px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.task-md {
+  width: 265px;
+  height: 38px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+}
+
+.task-sm {
+  width: 245px;
+  height: 28px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+}
+
+.checkbox {
+  border-radius: 6px;
+  background-color: white;
+  flex-shrink: 0;
+
+  cursor: pointer;
+}
+
+.checkmark {
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  transform: rotate(45deg);
+}
+
+.checkmark:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 14px;
+  background-color: black;
+  left: 14px;
+  top: 0px;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 2px;
+  background-color: black;
+  left: 8px;
+  top: 12px;
+}
+
+.task-lg > .checkbox {
+  width: 23.1px;
+  height: 22px;
+
+  margin-left: 11px;
+  margin-right: 7px;
+}
+
+.task-md > .checkbox {
+  width: 21px;
+  height: 20px;
+
+  margin: 0 9px;
+  margin-right: 6px;
+}
+
+.task-sm > .checkbox {
+  width: 18.9px;
+  height: 18px;
+
+  margin: 0 5px;
+}
+
+.text-field {
+  border: none;
+  background-color: initial;
+  cursor: pointer;
+}
+
+.text-field:focus {
+  outline: none;
+  text-decoration-line: underline;
+  text-decoration-color: rgb(220, 220, 220);
+}
+
+.task-title {
+  font-weight: 500;
+  font-size: 0.85rem;
+  width: 95%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  grid-column: 1 / span 2;
+}
+
+.date {
+  font-weight: 300;
+  font-size: 0.75rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.completed {
+  color: var(--color-text-lowest-freq);
+  text-decoration: line-through;
+}
+
+.editing {
+  visibility: visible;
+}
+
+.color-code {
+  height: 8px;
+  width: 8px;
+  border-radius: 100%;
+  margin-left: auto;
+  position: relative;
+  align-self: start;
+  top: 6px;
+  right: 6px;
+  flex-shrink: 0;
+}
+
+.color-code--none {
+  background-color: initial;
+}
+
+.color-code--red {
+  background-color: red;
+}
+
+.color-code--orange {
+  background-color: orange;
+}
+
+.color-code--yellow {
+  background-color: yellow;
+}
+
+.color-code--green {
+  background-color: green;
+}
+
+.color-code--blue {
+  background-color: blue;
+}
+
+.color-code--purple {
+  background-color: purple;
+}
+
+.color-code--gray {
+  background-color: gray;
+}
