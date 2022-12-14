@@ -10,13 +10,11 @@ class AddTask {
 		container.setAttribute('class', 'addtask');
 
 		const form = document.createElement('form');
-		form.setAttribute('class', 'addtask__form');
 		container.append(form);
 
 		const text = document.createElement('input');
 		text.type = 'text';
 		text.placeholder = 'Add a new task...';
-		form.append(text);
 
 		const submit = document.createElement('input');
 		submit.type = 'submit';
@@ -31,7 +29,7 @@ class AddTask {
 			text.value = '';
 		});
 
-		form.append(submit);
+		form.append(text, submit);
 
 		return container;
 	}

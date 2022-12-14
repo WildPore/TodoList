@@ -1,0 +1,22 @@
+@mixin flexCenter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// TODO Good candidate to move to own file.
+$border-radius: 10px;
+@mixin borderRadius {
+  border-radius: $border-radius;
+}
+
+@mixin borderRadiusLeft {
+  border-top-left-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+}
+
+@mixin borderRadiusRight {
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+}

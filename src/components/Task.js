@@ -1,5 +1,5 @@
 class Task {
-	constructor(title) {
+	constructor(title, completed = false) {
 		this.title = title;
 	}
 
@@ -15,6 +15,11 @@ class Task {
 
 		const markCompleteBtn = document.createElement('button');
 		markCompleteBtn.textContent = 'Mark Complete!';
+
+		markCompleteBtn.addEventListener('click', (e) => {
+			console.log(e.target.parentNode.remove());
+
+		});
 
 		task.append(title, date, markCompleteBtn);
 		return task;

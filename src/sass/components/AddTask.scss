@@ -1,0 +1,48 @@
+.addtask {
+  @include flexCenter;
+  @include borderRadius;
+  @include shadow-elevation-medium;
+
+  > form {
+    font-family: "Helvetica Neue";
+    background-color: white;
+
+    outline: none;
+
+    @include flexCenter;
+    @include borderRadius;
+
+    &:focus-within {
+      outline: rebeccapurple solid 2px;
+      outline-offset: -2px;
+      @include borderRadiusLeft;
+    }
+
+    @mixin addTask--SetDims {
+      height: 40px;
+      border: none;
+      padding: 0 15px;
+    }
+
+    > input[type="text"] {
+      // Reset UserAgent focus styling
+      // Probably need to move to mixin and research best practices
+      &:focus {
+        outline: none;
+      }
+
+      flex-grow: 1;
+      background-color: transparent;
+
+      @include addTask--SetDims;
+    }
+
+    > input[type="submit"] {
+      background-color: rebeccapurple;
+      color: white;
+
+      @include addTask--SetDims;
+      @include borderRadiusRight;
+    }
+  }
+}

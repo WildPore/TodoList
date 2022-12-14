@@ -1,7 +1,38 @@
 .task {
+  @include shadow-elevation-medium;
+
   width: 400px;
   min-height: 150px;
   background-color: white;
   padding: 10px;
   border-radius: 10px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+
+  font-family: "Helvetica Neue";
+  > h2,
+  h3,
+  h4 {
+    margin: 0;
+    font-weight: 400;
+  }
+
+  > h2 {
+    font-size: 16px;
+  }
+
+  > h3 {
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  > button {
+    width: 200px;
+    align-self: center;
+    margin-top: auto;
+  }
 }

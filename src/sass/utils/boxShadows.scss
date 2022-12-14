@@ -1,25 +1,30 @@
-$shadow-color: 0deg 0% 58%;
+$shadow-hue: 0deg;
+$shadow-saturation: 0%;
+$shadow-lightness: 58%;
 
 @mixin shadow-elevation-low {
-  box-shadow: 0.3px 0.8px 1px hsl(var(--shadow-color) / 0.39),
-    0.6px 1.4px 1.7px -1.2px hsl(var(--shadow-color) / 0.39),
-    1.5px 3.5px 4.3px -2.5px hsl(var(--shadow-color) / 0.39);
+  box-shadow: 0.3px 0.8px 1px
+      hsl($shadow-hue, $shadow-saturation, $shadow-lightness, 0.39),
+    0.6px 1.4px 1.7px -1.2px hsl($shadow-hue, $shadow-saturation, $shadow-lightness, 0.39),
+    1.5px 3.5px 4.3px -2.5px hsl($shadow-hue, $shadow-saturation, $shadow-lightness, 0.39);
 }
 
 @mixin shadow-elevation-medium {
-  box-shadow: 0.3px 0.8px 1px hsl(var(--shadow-color) / 0.41),
-    1.2px 2.8px 3.4px -0.8px hsl(var(--shadow-color) / 0.41),
-    3px 7.1px 8.7px -1.7px hsl(var(--shadow-color) / 0.41),
-    7.3px 17.3px 21.1px -2.5px hsl(var(--shadow-color) / 0.41);
+  box-shadow: 0.3px 0.8px 1px
+      hsl($shadow-hue, $shadow-saturation, $shadow-lightness, 0.41),
+    1.2px 2.8px 3.4px -0.8px hsl($shadow-hue, $shadow-saturation, $shadow-lightness, 0.41),
+    3px 7.1px 8.7px -1.7px hsl($shadow-hue, $shadow-saturation, $shadow-lightness, 0.41),
+    7.3px 17.3px 21.1px -2.5px hsl($shadow-hue, $shadow-saturation, $shadow-lightness, 0.41);
 }
 
 @mixin shadow-elevation-high {
-  box-shadow: 0.3px 0.8px 1px hsl(var(--shadow-color) / 0.38),
-    2.2px 5.3px 6.5px -0.4px hsl(var(--shadow-color) / 0.38),
-    4.2px 9.9px 12.1px -0.7px hsl(var(--shadow-color) / 0.38),
-    6.9px 16.3px 19.9px -1.1px hsl(var(--shadow-color) / 0.38),
-    11px 26.1px 31.9px -1.4px hsl(var(--shadow-color) / 0.38),
-    17.2px 40.9px 49.9px -1.8px hsl(var(--shadow-color) / 0.38),
-    26.2px 62.3px 76px -2.1px hsl(var(--shadow-color) / 0.38),
-    38.7px 91.8px 112.1px -2.5px hsl(var(--shadow-color) / 0.38);
+  box-shadow: 0.3px 0.8px 1px
+      hsl($shadow-hue, $shadow-saturation, $shadow-lightness, 0.38),
+    2.2px 5.3px 6.5px -0.4px hsl($shadow-hue, $shadow-saturation, $shadow-lightness, 0.38),
+    4.2px 9.9px 12.1px -0.7px hsl($shadow-hue, $shadow-saturation, $shadow-lightness, 0.38),
+    6.9px 16.3px 19.9px -1.1px hsl($shadow-hue, $shadow-saturation, $shadow-lightness, 0.38),
+    11px 26.1px 31.9px -1.4px hsl($shadow-hue, $shadow-saturation, $shadow-lightness, 0.38),
+    17.2px 40.9px 49.9px -1.8px hsl($shadow-hue, $shadow-saturation, $shadow-lightness, 0.38),
+    26.2px 62.3px 76px -2.1px hsl($shadow-hue, $shadow-saturation, $shadow-lightness, 0.38),
+    38.7px 91.8px 112.1px -2.5px hsl($shadow-hue, $shadow-saturation, $shadow-lightness, 0.38);
 }
