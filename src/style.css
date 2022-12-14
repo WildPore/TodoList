@@ -94,201 +94,27 @@ h6 {
   justify-content: center;
   align-items: center;
   gap: 10px;
-}
-
-.project {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: end;
-
-  background-color: white;
-  padding: 25px;
+  background-color: gainsboro;
 }
 
 .task {
-  width: 300px;
-  background-color: gainsboro;
+  width: 400px;
+  min-height: 150px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
 
   display: flex;
-  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
 
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 0.85rem;
 
   box-shadow: var(--shadow-elevation-low);
-}
-
-.task:hover {
-  background-color: rgb(225, 225, 225);
-}
-
-.text-container {
-  flex-grow: 1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: end;
-}
-
-.task-lg {
-  height: 50px;
-  margin-top: 6px;
-  margin-bottom: 8px;
-  border-radius: 8px;
-}
-
-.task-md {
-  width: 265px;
-  height: 38px;
-  margin-bottom: 8px;
-  border-radius: 8px;
-}
-
-.task-sm {
-  width: 245px;
-  height: 28px;
-  margin-bottom: 6px;
-  border-radius: 8px;
-}
-
-.checkbox {
-  border-radius: 6px;
-  background-color: white;
-  flex-shrink: 0;
-
-  cursor: pointer;
-}
-
-.checkmark {
-  display: inline-block;
-  width: 20px;
-  height: 14px;
-  transform: rotate(45deg);
-}
-
-.checkmark:before {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 14px;
-  background-color: black;
-  left: 14px;
-  top: 0px;
-}
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 2px;
-  background-color: black;
-  left: 8px;
-  top: 12px;
-}
-
-.task-lg > .checkbox {
-  width: 23.1px;
-  height: 22px;
-
-  margin-left: 11px;
-  margin-right: 7px;
-}
-
-.task-md > .checkbox {
-  width: 21px;
-  height: 20px;
-
-  margin: 0 9px;
-  margin-right: 6px;
-}
-
-.task-sm > .checkbox {
-  width: 18.9px;
-  height: 18px;
-
-  margin: 0 5px;
-}
-
-.text-field {
-  border: none;
-  background-color: initial;
-  cursor: pointer;
-}
-
-.text-field:focus {
-  outline: none;
-  text-decoration-line: underline;
-  text-decoration-color: rgb(220, 220, 220);
-}
-
-.task-title {
-  font-weight: 500;
-  font-size: 0.85rem;
-  width: 95%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  grid-column: 1 / span 2;
-}
-
-.date {
-  font-weight: 300;
-  font-size: 0.75rem;
-  text-align: right;
-  white-space: nowrap;
-}
-
-.completed {
-  color: var(--color-text-lowest-freq);
-  text-decoration: line-through;
-}
-
-.editing {
-  visibility: visible;
-}
-
-.color-code {
-  height: 8px;
-  width: 8px;
-  border-radius: 100%;
-  margin-left: auto;
-  position: relative;
-  align-self: start;
-  top: 6px;
-  right: 6px;
-  flex-shrink: 0;
-}
-
-.color-code--none {
-  background-color: initial;
-}
-
-.color-code--red {
-  background-color: red;
-}
-
-.color-code--orange {
-  background-color: orange;
-}
-
-.color-code--yellow {
-  background-color: yellow;
-}
-
-.color-code--green {
-  background-color: green;
-}
-
-.color-code--blue {
-  background-color: blue;
-}
-
-.color-code--purple {
-  background-color: purple;
-}
-
-.color-code--gray {
-  background-color: gray;
 }
 
 .addtask {
