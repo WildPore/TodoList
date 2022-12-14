@@ -290,3 +290,24 @@ h6 {
 .color-code--gray {
   background-color: gray;
 }
+
+.addtask {
+  width: 90%;
+  padding: 15px;
+}
+
+.addtask__form {
+  display: flex;
+  gap: 5px;
+
+  align-items: center;
+}
+
+.addtask__form > input[type="text"] {
+  width: 80%;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.addtask__form > input[type="submit"] {
+}

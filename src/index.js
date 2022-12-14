@@ -1,27 +1,15 @@
 import './style.css';
+import AddTask from './components/AddTask';
 import Task from './components/Task';
+import TaskContainer from './components/TaskContainer';
 
 function component() {
 	const container = document.getElementById('container');
 
-	const project = document.createElement('div');
-	project.setAttribute('class', 'project');
-
-	const task = new Task('Add styling again');
-	project.append(task.element);
-
-	console.log(localStorage.getItem('previousUUID'));
-	console.log(task.UUID);
-	localStorage.setItem('previousUUID', task.UUID);
-
-	container.append(project);
-
-	console.log(JSON.stringify(task, null, 2));
+	const addTask = new AddTask();
+	container.append(addTask.element);
 
 	return container;
 }
 
 document.body.appendChild(component());
-
-// Store tasks in a task container.
-// The task container saves the tasks, along with metadata for container.
