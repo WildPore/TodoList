@@ -1,4 +1,4 @@
-import './style.css';
+import './sass/styles.scss';
 import AddTask from './components/AddTask';
 import Task from './components/Task';
 
