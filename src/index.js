@@ -1,7 +1,6 @@
 import './style.css';
 import AddTask from './components/AddTask';
 import Task from './components/Task';
-import TaskContainer from './components/TaskContainer';
 
 function component() {
 	const container = document.getElementById('container');
