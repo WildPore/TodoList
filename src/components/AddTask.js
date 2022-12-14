@@ -1,3 +1,5 @@
+import Task from "./Task";
+
 class AddTask {
 	// builds a field and then contains the behavior for managing that
 
@@ -23,7 +25,9 @@ class AddTask {
 		submit.addEventListener('click', (e) => {
 			e.preventDefault();
 
-			console.log(text.value);
+			const task = new Task(text.value);
+			document.getElementById('container').append(task.element);
+
 			text.value = '';
 		});
 
